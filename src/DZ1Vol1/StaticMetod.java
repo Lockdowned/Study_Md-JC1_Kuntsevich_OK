@@ -2,7 +2,7 @@ package DZ1Vol1;
 /*
 
 JUST EXPERIMENT
-
+NO STATIC METHOD
  */
 public class StaticMetod {
     public static void main(String[] args) {
