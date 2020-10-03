@@ -12,7 +12,7 @@ public class Cycles1_5 {
                 System.out.print(j + " x " + i + " = " + multi + "\t\t");
             }
         }
-        System.out.println("\n\n------------------------------------------------------------");
+        System.out.print("\n------------------------------------------------------------");
         for (int i = 1; i <= 10 ; i++) {
             System.out.println();
             for (int j = 6; j <= 9 ; j++) {

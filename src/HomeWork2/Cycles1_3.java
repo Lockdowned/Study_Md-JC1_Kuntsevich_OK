@@ -20,7 +20,5 @@ public class Cycles1_3 {
             sqrt *= numberIn;
         }
         System.out.println(sqrt);
-
-
     }
 }
