@@ -1,5 +1,6 @@
 package HomeWork2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Arrays2_3 {
@@ -9,35 +10,46 @@ public class Arrays2_3 {
         int size = IN.nextInt();
         System.out.println();
         int[] arr = new int[size];
+        System.out.print("\n\nВводим цифры для массива: ");
         int c = 0;
         for (int number:arr) {   // как-то можно улчучшить
             arr[c] = IN.nextInt();
             System.out.println("Индекс в массиве: " + c++);
         }
-        int i = arr.length - 1 ;
+
+
         System.out.println("do....while");
+        int i = arr.length - 1;
         do{
             System.out.print(arr[i--] + " ");
             if (i == -1) break;
         }while (i < arr.length);
-//        System.out.println("\n\nwhile");
-//        i = 0;
-//        while(i < arr.length){
-//            System.out.print(arr[i++] + " ");
-//        }
-//        System.out.println("\n\nfor");
-//        for (int j = 0; j < arr.length; j++) {
-//            System.out.print(arr[j] + " ");
-//        }
-//        System.out.println("\n\nforeach");
-//        for (int print: arr) {
-//            System.out.print(print + " ");
-//        }
 
 
+        System.out.println("\n\nwhile");
+        i = arr.length - 1;
+        while(i < arr.length){
+            System.out.print(arr[i--] + " ");
+            if (i == -1) break;
+        }
 
 
+        System.out.println("\n\nfor");
+        for (int j = arr.length - 1; j >= 0 ; j--) {
+            System.out.print(arr[j] + " ");
+        }
 
+
+        System.out.print("\n\nВводим цифры для массива foreach: ");
+        c = size;
+        for (int number:arr) {
+            arr[c -= 1] = IN.nextInt();
+            System.out.println("Индекс в массиве для foreach: " + c);
+        }
+        System.out.println("\n\nforeach"); //как foreach вывести подругому 'кроме отдельного fori'
+        for (int print: arr) {
+            System.out.print(print + " ");
+        }
 
     }
 }
