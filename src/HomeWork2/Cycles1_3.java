@@ -9,16 +9,16 @@ public class Cycles1_3 {
     public static void main(String[] args) {
         System.out.print("Возводимое число и степень:  ");
         Scanner number = new Scanner(System.in);
-        Scanner grade = new Scanner(System.in);
         double numberIn = number.nextDouble();
-        int gradeIn = grade.nextInt();
+        int gradeIn = number.nextInt();
         double sqrt = numberIn;
-        if (gradeIn == 0){
-            sqrt = 0;
+        if (gradeIn < 1){
+            System.out.println("Неверное значение степени");
+        }else {
+            for (int i = 2; i <= gradeIn ; i++) {
+                sqrt *= numberIn;
+            }
+            System.out.println(sqrt);
         }
-        for (int i = 2; i <= gradeIn ; i++) {
-            sqrt *= numberIn;
-        }
-        System.out.println(sqrt);
     }
 }
