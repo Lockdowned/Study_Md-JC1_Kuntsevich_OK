@@ -40,13 +40,21 @@ public class Arrays2_3 {
         }
 
 
-        System.out.print("\n\nВводим цифры для массива foreach: ");
+        System.out.println("\n\nforeach ");
+        String result = "";
+        for (int h : arr) {
+            result = h + " " + result; // как понимаю в String каждый раз чило дописывается а которое было уходит правее
+        }
+        System.out.println(result);
+
+
+        System.out.println("Вводим цифры для массива foreach: ");
         c = size;
         for (int number:arr) {
             arr[c -= 1] = IN.nextInt();
             System.out.println("Индекс в массиве для foreach: " + c);
         }
-        System.out.println("\n\nforeach"); //как foreach вывести подругому 'кроме отдельного fori'
+        System.out.println("\n\nforeach");
         for (int print: arr) {
             System.out.print(print + " ");
         }
