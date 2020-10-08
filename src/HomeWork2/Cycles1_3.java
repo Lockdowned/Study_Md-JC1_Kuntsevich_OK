@@ -12,10 +12,13 @@ public class Cycles1_3 {
         double numberIn = number.nextDouble();
         int gradeIn = number.nextInt();
         double sqrt = numberIn;
-        if (gradeIn < 1){
+        if (gradeIn < 0){
             System.out.println("Неверное значение степени");
+        }else if (gradeIn == 0){
+            sqrt =1;
+            System.out.println(sqrt);
         }else {
-            for (int i = 2; i <= gradeIn ; i++) {
+            for (int i = 1; i < gradeIn ; i++) {
                 sqrt *= numberIn;
             }
             System.out.println(sqrt);
