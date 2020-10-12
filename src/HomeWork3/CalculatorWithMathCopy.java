@@ -1,7 +1,6 @@
 package HomeWork3;
 
-public class CalculatorWithOperator {
-
+public class CalculatorWithMathCopy {
     double divEnd;
     int multipEnd;
     double subtractEnd;
@@ -12,7 +11,7 @@ public class CalculatorWithOperator {
     double modulEnd;
     double rootEnd;
 
-    public int ggg = 3;
+
 
 
 
@@ -41,26 +40,12 @@ public class CalculatorWithOperator {
 
 
     double exponentiation(double number, int rate){ // метод степени
-        double exp = number;
-        if (rate == 0) exp = 1;
-        else if (rate == 1) exp = number;
-        else{
-            for (int i = 2; i <= rate ; i++) {
-                exp *= number;
-            }
-        }
-        return this.exponentEnd = exp;
+        return this.exponentEnd = Math.pow(number, rate);
     }
 
 
     double modulation(double number){ // метод модуля
-        double mod;
-        if (number > 0){
-            mod = number;
-        }else if (number < 0){
-            mod = -number;
-        }else mod = number;
-        return this.modulEnd = mod;
+        return this.modulEnd = Math.abs(number);
     }
 
 
@@ -68,6 +53,4 @@ public class CalculatorWithOperator {
     double rootOFnumber(double number, int rate){   // метод корня ---можно написать собственное возведение в степень но это долго
         return this.rootEnd = Math.pow(number, 1.0 / rate);
     }
-
 }
-
