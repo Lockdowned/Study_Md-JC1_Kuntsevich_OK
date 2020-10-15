@@ -3,9 +3,13 @@ package HomeWork2;
 import java.util.Arrays;
 
 public class BublSort_4 {
-    public int[] arr; // надо переделать в приват и вводить в сетеры
+    private int[] arr;
 
-    public void ArraysForBubbles(){
+    public void setArr(int[] arr) {
+        this.arr = arr;
+    }
+
+    public void arraysForBubbles(){
         System.out.println("Изначальный массив: " + Arrays.toString(arr));
 
         boolean completedSort = false;

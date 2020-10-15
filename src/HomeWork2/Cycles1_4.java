@@ -4,7 +4,7 @@ public class Cycles1_4 {
     public static void main(String[] args) {
         long a = 1;
         long d = 1;
-        while (a < Long.MAX_VALUE && a > 0){
+        while (a > 0){
             d = a;
             a *= 3;
         }

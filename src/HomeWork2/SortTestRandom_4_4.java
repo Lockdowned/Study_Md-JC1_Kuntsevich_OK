@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class SortTestRandom_4_4 {
-    public void RandomTest(){
+    public void randomTest(){
 
         Random g = new Random();
         int size = g.nextInt(30);

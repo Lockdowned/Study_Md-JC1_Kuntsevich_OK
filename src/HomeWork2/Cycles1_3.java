@@ -7,9 +7,10 @@ import java.util.Scanner;
 
 public class Cycles1_3 {
     public static void main(String[] args) {
-        System.out.print("Возводимое число и степень:  ");
+        System.out.print("Возводимое число:  ");
         Scanner number = new Scanner(System.in);
         double numberIn = number.nextDouble();
+        System.out.print("Степень числа:  ");
         int gradeIn = number.nextInt();
         double sqrt = numberIn;
         if (gradeIn < 0){

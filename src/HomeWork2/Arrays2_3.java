@@ -1,6 +1,5 @@
 package HomeWork2;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Arrays2_3 {
@@ -43,7 +42,7 @@ public class Arrays2_3 {
         System.out.println("\n\nforeach ");
         String result = "";
         for (int h : arr) {
-            result = h + " " + result; // как понимаю в String каждый раз чило дописывается а которое было уходит правее
+            result = h + " " + result;
         }
         System.out.println(result);
 

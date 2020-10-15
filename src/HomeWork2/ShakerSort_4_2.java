@@ -3,9 +3,13 @@ package HomeWork2;
 import java.util.Arrays;
 
 public class ShakerSort_4_2 {
-        int[] arr;
+        private int[] arr;
 
-        public void ArraysForShaker(){
+    public void setArr(int[] arr) {
+        this.arr = arr;
+    }
+
+    public void arraysForShaker(){
         System.out.println("Изначальный массив: " + Arrays.toString(arr));
 
         boolean completedSort = false;

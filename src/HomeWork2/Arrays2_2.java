@@ -1,6 +1,5 @@
 package HomeWork2;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Arrays2_2 {
@@ -10,12 +9,13 @@ public class Arrays2_2 {
         int size = IN.nextInt();
         System.out.println();
         int[] arr = new int[size];
-        int c = 0;
+        int c = size;
         for (int number:arr) {
-                arr[c] = IN.nextInt();
-                System.out.println("Индекс в массиве: " + c++);
+            System.out.println("Ввести ещё: " + c-- + " числа");
+            arr[c] = IN.nextInt();
         }
         int b;
+        System.out.print("Каждый второй элемент массива: ");
         for (int i = 0; i <= arr.length - 1; i++) {
             b = i;
             if ((b %= 2) == 0){

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ConsoleArray_4_5 {
-    public void ConsoleInput(){
+    public void consoleInput(){
         Scanner consol = new Scanner(System.in);
         System.out.print("Размер массива : ");
         int size = consol.nextInt();
