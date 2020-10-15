@@ -12,9 +12,6 @@ public class CalculatorWithOperator {
     double modulEnd;
     double rootEnd;
 
-    public int ggg = 3;
-
-
 
 
     double division(double dividend, double divider) { //метод деления

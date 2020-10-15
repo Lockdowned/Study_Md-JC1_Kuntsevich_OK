@@ -1,6 +1,8 @@
 package HomeWork3;
 
 public class CalculatorWithMathExtends extends CalculatorWithOperator {
+
+    @Override
     double exponentiation(double number, int rate){ // метод степени
         return this.exponentEnd = Math.pow(number, rate);
     }

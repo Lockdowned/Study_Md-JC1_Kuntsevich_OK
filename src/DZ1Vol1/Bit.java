@@ -109,11 +109,17 @@ public class Bit {
 
         a &= b; // a = a & b
         System.out.println(a);
+        a = 45;
         a |= b; // a = a | b
+        a = 45;
         a ^= a ^ b; // a = a ^ b
+        a = 45;
         a >>= b; // a = a >> b;
+        a = 45;
         a <<= b; // a = a << b;
+        a = 45;
         a >>>= b; // a = a >>> b;
+        a = 45;
 
 //        double l = 42.5;
 ////        l >>= 2; //cannot
