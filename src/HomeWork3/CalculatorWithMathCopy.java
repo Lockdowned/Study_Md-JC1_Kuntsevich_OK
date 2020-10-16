@@ -1,8 +1,8 @@
 package HomeWork3;
 
-public class CalculatorWithMathCopy {
+public class CalculatorWithMathCopy implements ICalculator {
     private double divEnd;
-    private int multipEnd;
+    private double multipEnd;
     private double subtractEnd;
     private double sumEnd;
     private double exponentEnd;
@@ -14,7 +14,7 @@ public class CalculatorWithMathCopy {
         return divEnd;
     }
 
-    public int getMultipEnd() {
+    public double getMultipEnd() {
         return multipEnd;
     }
 
@@ -38,41 +38,41 @@ public class CalculatorWithMathCopy {
         return rootEnd;
     }
 
-    double division(double dividend, double divider) { //метод деления
+    public double division(double dividend, double divider) { //метод деления
         divEnd = dividend / divider;
         return divEnd;
     }
 
-    int multiply(int multiplierFirst, int multiplierSecond){   //метод умножения
+    public double multiply(double multiplierFirst, double multiplierSecond){   //метод умножения
         multipEnd = multiplierFirst * multiplierSecond;
         return multipEnd;
     }
 
 
-    double subtraction(double minusFirst,double minusSecond){  //метод вычитания
+    public double subtraction(double minusFirst,double minusSecond){  //метод вычитания
         subtractEnd = minusFirst - minusSecond;
         return subtractEnd;
     }
 
 
-    double addition(double addFirst,double addSecond){ // метод сложения
+    public double addition(double addFirst,double addSecond){ // метод сложения
         sumEnd = addFirst + addSecond;
         return sumEnd;
     }
 
 
-    double exponentiation(double number, int rate){ // метод степени
+    public double exponentiation(double number, int rate){ // метод степени
         return this.exponentEnd = Math.pow(number, rate);
     }
 
 
-    double modulation(double number){ // метод модуля
+    public double modulation(double number){ // метод модуля
         return this.modulEnd = Math.abs(number);
     }
 
 
 
-    double rootOFnumber(double number, int rate){   // метод корня
+    public double rootOFnumber(double number, int rate){   // метод корня
         return this.rootEnd = Math.pow(number, 1.0 / rate);
     }
 }

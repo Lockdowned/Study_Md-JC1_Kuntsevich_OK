@@ -1,23 +1,14 @@
 package HomeWork3;
 
-public class CalculatorWithCounter {
+public class CalculatorWithCounterInterface {
+
     private long counter;
-    private CalculatorWithOperator calculator1; //писать final чтобы никто не влез с сетерами
-    private CalculatorWithMathCopy calculator2;
-    private CalculatorWithMathExtends calculator3;
+    private ICalculator calculator1;
+    private ICalculator calculator2;
+    private ICalculator calculator3;
 
-
-
-    CalculatorWithCounter(CalculatorWithOperator calc){
+    CalculatorWithCounterInterface(ICalculator calc){
         this.calculator1 = calc;
-    }
-
-    CalculatorWithCounter(CalculatorWithMathCopy calc){
-        this.calculator2 = calc;
-    }
-
-    CalculatorWithCounter(CalculatorWithMathExtends calc){
-        this.calculator3 = calc;
     }
 
 
@@ -90,94 +81,17 @@ public class CalculatorWithCounter {
 
     double rootOFnumber(double number, int rate) {   // метод корня
         this.counter++;
-        if (this.calculator1 != null){
+        if (this.calculator1 != null) {
             return calculator1.rootOFnumber(number, rate);
-        }else if (this.calculator2 != null){
+        } else if (this.calculator2 != null) {
             return calculator2.rootOFnumber(number, rate);
-        }else {
+        } else {
             return calculator3.rootOFnumber(number, rate);
         }
     }
 
     public long getCounter() {
-         return this.counter;
-    }
-
-
-    /*
-    НАРУШЕНИЕ УСЛОВИЯ ЧТОБЫ В MAIN НЕ БЫЛО СТРАШНО
-     */
-
-    public double getDivEnd() {
-        if (this.calculator1 != null){
-            return calculator1.getDivEnd();
-        }else if (this.calculator2 != null){
-            return calculator2.getDivEnd();
-        }else {
-            return calculator3.getDivEnd();
-        }
-
-    }
-
-    public double getMultipEnd() {
-        if (this.calculator1 != null){
-            return calculator1.getMultipEnd();
-        }else if (this.calculator2 != null){
-            return calculator2.getMultipEnd();
-        }else {
-            return calculator3.getMultipEnd();
-        }
-
-    }
-
-    public double getSubtractEnd() {
-        if (this.calculator1 != null){
-            return calculator1.getSubtractEnd();
-        }else if (this.calculator2 != null){
-            return calculator2.getSubtractEnd();
-        }else {
-            return calculator3.getSubtractEnd();
-        }
-    }
-
-    public double getSumEnd() {
-        if (this.calculator1 != null){
-            return calculator1.getSumEnd();
-        }else if (this.calculator2 != null){
-            return calculator2.getSumEnd();
-        }else {
-            return calculator3.getSumEnd();
-        }
-    }
-
-    public double getExponentEnd() {
-        if (this.calculator1 != null){
-            return calculator1.getExponentEnd();
-        }else if (this.calculator2 != null){
-            return calculator2.getExponentEnd();
-        }else {
-            return calculator3.getExponentEnd();
-        }
-    }
-
-    public double getModulEnd() {
-        if (this.calculator1 != null){
-            return calculator1.getModulEnd();
-        }else if (this.calculator2 != null){
-            return calculator2.getModulEnd();
-        }else {
-            return calculator3.getModulEnd();
-        }
-    }
-
-    public double getRootEnd() {
-        if (this.calculator1 != null){
-            return calculator1.getRootEnd();
-        }else if (this.calculator2 != null){
-            return calculator2.getRootEnd();
-        }else {
-            return calculator3.getRootEnd();
-        }
+        return this.counter;
     }
 
 }

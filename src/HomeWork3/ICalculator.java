@@ -2,14 +2,18 @@ package HomeWork3;
 
 public interface ICalculator {
 
-    double division();
-    int multiply();
-    double subtraction();
-    double addition();
+    double division(double dividend, double divider);
 
-    double exponentiation();
-    double modulation();
-    double rootOFnumber();
-            
+    double multiply(double multiplierFirst, double multiplierSecond);
 
+    double subtraction(double minusFirst,double minusSecond);
+
+    double addition(double addFirst,double addSecond);
+
+    double exponentiation(double number, int rate);
+
+    double modulation(double number);
+
+    double rootOFnumber(double number, int rate);
 }
+
