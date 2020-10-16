@@ -3,32 +3,64 @@ package HomeWork3;
 import java.util.Objects;
 
 public class CalculatorWithCounter {
-    CalculatorWithOperator CalculatorWithOperator;
-    CalculatorWithMathCopy CalculatorWithMathCopy;
-    CalculatorWithMathExtends CalculatorWithMathExtends;
+    private CalculatorWithOperator calculator1;
+    privat calculator2;
+    privat calculator3;
 
-    CalculatorWithCounter(String with){
-        if (with == "Operator"){
-            this.CalculatorWithOperator = new CalculatorWithOperator();
-        }else if (with == "MathCopy"){
-            this.CalculatorWithMathCopy = new CalculatorWithMathCopy();
-        }else if (with == "MathExtends"){
-            this.CalculatorWithMathExtends = new CalculatorWithMathExtends();
-        }else {
-            System.out.println("plz print: Operator or MathCopy or MathExtends");
-        }
+
+
+    CalculatorWithCounter(CalculatorWithOperator calc){
+        calc = this.calculator1;
+
+    }
+
+    CalculatorWithCounter(CalculatorWithMathCopy calc){
+
+    }
+
+    CalculatorWithCounter(CalculatorWithMathExtends calc){
+
     }
 
 
+    double division(double dividend, double divider) { //метод деления
 
-//    long count;
-//
-//
-//
-//    public long getCountOperation(){
-//        return count;
-//    }
+
+    }
+
+
+    int multiply(int multiplierFirst, int multiplierSecond) {   //метод умножения
+
+
+    }
+
+    double subtraction(double minusFirst,double minusSecond) {  //метод вычитания
+
+    }
+
+    double addition(double addFirst,double addSecond) { // метод сложения
+
+    }
+
+    double exponentiation(double number, int rate) { // метод степени
+
+
+    }
+
+    double modulation(double number) { // метод модуля
+
+    }
+
+    double rootOFnumber(double number, int rate) {   // метод корня
+
+
+    }
+
+
+    
+
+
+
+
 
 }
-
-

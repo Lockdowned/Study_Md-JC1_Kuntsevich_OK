@@ -4,18 +4,18 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator {
 
     @Override
     double exponentiation(double number, int rate){ // метод степени
-        return this.exponentEnd = Math.pow(number, rate);
+        setExponentEnd(Math.pow(number, rate));
+        return 0;
     }
-
 
     double modulation(double number){ // метод модуля
-        return this.modulEnd = Math.abs(number);
+        setModulEnd(Math.abs(number));
+        return 0;
     }
 
-
-
     double rootOFnumber(double number, int rate){   // метод корня
-        return this.rootEnd = Math.pow(number, 1.0 / rate);
+        setRootEnd(Math.pow(number, 1.0 / rate));
+        return 0;
     }
 
 

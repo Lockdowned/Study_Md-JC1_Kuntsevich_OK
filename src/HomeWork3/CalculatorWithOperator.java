@@ -1,17 +1,53 @@
 package HomeWork3;
 
 public class CalculatorWithOperator {
+    private double divEnd;
+    private int multipEnd;
+    private double subtractEnd;
+    private double sumEnd;
+    private double exponentEnd;
+    private double modulEnd;
+    private double rootEnd;
 
-    double divEnd;
-    int multipEnd;
-    double subtractEnd;
-    double sumEnd;
+    public void setExponentEnd(double exponentEnd) {
+        this.exponentEnd = exponentEnd;
+    }
 
+    public void setModulEnd(double modulEnd) {
+        this.modulEnd = modulEnd;
+    }
 
-    double exponentEnd;
-    double modulEnd;
-    double rootEnd;
+    public void setRootEnd(double rootEnd) {
+        this.rootEnd = rootEnd;
+    }
 
+    public double getDivEnd() {
+        return divEnd;
+    }
+
+    public int getMultipEnd() {
+        return multipEnd;
+    }
+
+    public double getSubtractEnd() {
+        return subtractEnd;
+    }
+
+    public double getSumEnd() {
+        return sumEnd;
+    }
+
+    public double getExponentEnd() {
+        return exponentEnd;
+    }
+
+    public double getModulEnd() {
+        return modulEnd;
+    }
+
+    public double getRootEnd() {
+        return rootEnd;
+    }
 
 
     double division(double dividend, double divider) { //метод деления
@@ -52,17 +88,17 @@ public class CalculatorWithOperator {
 
     double modulation(double number){ // метод модуля
         double mod;
-        if (number > 0){
-            mod = number;
-        }else if (number < 0){
+        if (number < 0){
             mod = -number;
-        }else mod = number;
+        }else {
+            mod = number;
+        }
         return this.modulEnd = mod;
     }
 
 
 
-    double rootOFnumber(double number, int rate){   // метод корня ---можно написать собственное возведение в степень но это долго
+    double rootOFnumber(double number, int rate){   // метод корня
         return this.rootEnd = Math.pow(number, 1.0 / rate);
     }
 

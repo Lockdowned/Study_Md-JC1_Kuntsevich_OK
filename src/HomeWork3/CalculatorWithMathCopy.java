@@ -1,20 +1,42 @@
 package HomeWork3;
 
 public class CalculatorWithMathCopy {
-    double divEnd;
-    int multipEnd;
-    double subtractEnd;
-    double sumEnd;
+    private double divEnd;
+    private int multipEnd;
+    private double subtractEnd;
+    private double sumEnd;
+    private double exponentEnd;
+    private double modulEnd;
+    private double rootEnd;
 
 
-    double exponentEnd;
-    double modulEnd;
-    double rootEnd;
+    public double getDivEnd() {
+        return divEnd;
+    }
 
+    public int getMultipEnd() {
+        return multipEnd;
+    }
 
+    public double getSubtractEnd() {
+        return subtractEnd;
+    }
 
+    public double getSumEnd() {
+        return sumEnd;
+    }
 
+    public double getExponentEnd() {
+        return exponentEnd;
+    }
 
+    public double getModulEnd() {
+        return modulEnd;
+    }
+
+    public double getRootEnd() {
+        return rootEnd;
+    }
 
     double division(double dividend, double divider) { //метод деления
         divEnd = dividend / divider;
@@ -50,7 +72,7 @@ public class CalculatorWithMathCopy {
 
 
 
-    double rootOFnumber(double number, int rate){   // метод корня ---можно написать собственное возведение в степень но это долго
+    double rootOFnumber(double number, int rate){   // метод корня
         return this.rootEnd = Math.pow(number, 1.0 / rate);
     }
 }
