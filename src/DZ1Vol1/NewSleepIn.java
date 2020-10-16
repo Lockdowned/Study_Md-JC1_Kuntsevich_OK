@@ -2,13 +2,13 @@ package DZ1Vol1;
 
 public class NewSleepIn {
     public static void main(String[] args) {
-//        boolean isWeekday = true;
-//        boolean isVacation = true;
-//      if (sleepIn(isWeekday, isVacation)){
-//          System.out.println("Можем спать дальше");
-//      } else {
-//          System.out.println("Пора идти на работу");
-//      }
+        boolean isWeekday = true;
+        boolean isVacation = false;
+      if (sleepIn(isWeekday, isVacation)){
+          System.out.println("Можем спать дальше");
+      } else {
+          System.out.println("Пора идти на работу");
+      }
         /*
         or
          */
