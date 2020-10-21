@@ -5,7 +5,6 @@ public class Cycles1_2 {
     public static void main(String[] args) {
         multiplication(Integer.parseInt(args[0]));
     }
-
     static void multiplication(int nums){
         int sum = 1;
         String cash = "";
@@ -23,10 +22,4 @@ public class Cycles1_2 {
         System.out.print(cash);
         System.out.print(" = " + sum);
     }
-
-
-
-
-
-
 }
