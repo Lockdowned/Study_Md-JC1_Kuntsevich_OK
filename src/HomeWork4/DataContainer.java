@@ -1,5 +1,7 @@
 package HomeWork4;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DataContainer<T> {
@@ -18,4 +20,23 @@ public class DataContainer<T> {
         data[count] = item;
         return count;
     }
+
+
+    T get(int index){
+        if (index < data.length){
+            return data[index];
+        }else return null;
+    }
+
+    T[] getItems(){
+        return data;
+    }
+    boolean delete(int index){
+        return true;
+    }
+
+
+
+
+
 }

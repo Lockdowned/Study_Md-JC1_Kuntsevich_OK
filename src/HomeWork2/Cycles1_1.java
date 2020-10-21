@@ -1,10 +1,8 @@
 package HomeWork2;
-/*
-КОД НЕОБХОДИМО УЛУЧШАТЬ
- */
+
 public class Cycles1_1 {
     public static void main(String[] args) {
-        multiplication(5);
+        multiplication(Integer.parseInt(args[0]));
     }
     static void multiplication(int nums){
         int result = 1;

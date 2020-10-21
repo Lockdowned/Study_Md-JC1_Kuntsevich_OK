@@ -3,8 +3,7 @@ package HomeWork2;
 
 public class Cycles1_2 {
     public static void main(String[] args) {
-        multiplication(325621);
-
+        multiplication(Integer.parseInt(args[0]));
     }
 
     static void multiplication(int nums){
@@ -15,7 +14,7 @@ public class Cycles1_2 {
             nums /= 10;
             sum *= b;
             if (nums == 0){
-                cash =b + cash;
+                cash = b + cash;
             }else {
                 cash = " * " + b + cash;
             }
@@ -23,7 +22,6 @@ public class Cycles1_2 {
         }
         System.out.print(cash);
         System.out.print(" = " + sum);
-
     }
 
 
