@@ -1,79 +1,58 @@
 package HomeWork3;
 
-public class CalculatorWithMemory {
-    private double divEnd;
-    private double multipEnd;
-    private double subtractEnd;
-    private double sumEnd;
-    private double exponentEnd;
-    private double modulEnd;
-    private double rootEnd;
+public class CalculatorWithMemory{
+    private ICalculator calculator;
+    private double lastNumberChanged;
+    private double saveNumber;
 
-
-    public double getDivEnd() {
-        return divEnd;
+    CalculatorWithMemory(ICalculator calc){
+        this.calculator = calc;
     }
 
-    public double getMultipEnd() {
-        return multipEnd;
+    public double saveLastNumber(){
+        this.saveNumber = this.lastNumberChanged;
+        return this.saveNumber;
     }
 
-    public double getSubtractEnd() {
-        return subtractEnd;
-    }
-
-    public double getSumEnd() {
-        return sumEnd;
-    }
-
-    public double getExponentEnd() {
-        return exponentEnd;
-    }
-
-    public double getModulEnd() {
-        return modulEnd;
-    }
-
-    public double getRootEnd() {
-        return rootEnd;
+    public double getSaveNumber() {
+        double cash = this.saveNumber;
+        this.saveNumber = 0.0;
+        return cash;
     }
 
     public double division(double dividend, double divider) { //метод деления
-        divEnd = dividend / divider;
-        return divEnd;
+        this.lastNumberChanged = calculator.division(dividend, divider);
+        return this.lastNumberChanged;
     }
 
-    public double multiply(double multiplierFirst, double multiplierSecond){   //метод умножения
-        multipEnd = multiplierFirst * multiplierSecond;
-        return multipEnd;
+    public double multiply(double multiplierFirst, double multiplierSecond) {   //метод умножения
+        this.lastNumberChanged = calculator.multiply(multiplierFirst, multiplierSecond);
+        return this.lastNumberChanged;
     }
 
-
-    public double subtraction(double minusFirst,double minusSecond){  //метод вычитания
-        subtractEnd = minusFirst - minusSecond;
-        return subtractEnd;
+    public double subtraction(double minusFirst,double minusSecond) {  //метод вычитания
+        this.lastNumberChanged = calculator.subtraction(minusFirst, minusSecond);
+        return this.lastNumberChanged;
     }
 
-
-    public double addition(double addFirst,double addSecond){ // метод сложения
-        sumEnd = addFirst + addSecond;
-        return sumEnd;
+    public double addition(double addFirst,double addSecond) { // метод сложения
+        this.lastNumberChanged = calculator.addition(addFirst, addSecond);
+        return this.lastNumberChanged;
     }
 
-
-    public double exponentiation(double number, int rate){ // метод степени
-        return this.exponentEnd = Math.pow(number, rate);
+    public double exponentiation(double number, int rate) { // метод степени
+        this.lastNumberChanged = calculator.exponentiation(number, rate);
+        return this.lastNumberChanged;
     }
 
-
-    public double modulation(double number){ // метод модуля
-        return this.modulEnd = Math.abs(number);
+    public double modulation(double number) { // метод модуля
+        this.lastNumberChanged = calculator.modulation(number);
+        return this.lastNumberChanged;
     }
 
-
-
-    public double rootOFnumber(double number, int rate){   // метод корня
-        return this.rootEnd = Math.pow(number, 1.0 / rate);
+    public double rootOFnumber(double number, int rate) {   // метод корня
+        this.lastNumberChanged = calculator.rootOFnumber(number, rate);
+        return this.lastNumberChanged;
     }
 
 }
