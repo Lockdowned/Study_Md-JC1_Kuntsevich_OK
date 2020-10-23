@@ -21,7 +21,7 @@ public class CalculatorWithCounter {
     }
 
 
-    double division(double dividend, double divider) { //метод деления
+    public double division(double dividend, double divider) { //метод деления
         this.counter++;
         if (this.calculator1 != null){
             return calculator1.division(dividend, divider);
@@ -33,7 +33,7 @@ public class CalculatorWithCounter {
 
     }
 
-    double multiply(int multiplierFirst, int multiplierSecond) {   //метод умножения
+    public double multiply(double multiplierFirst, double multiplierSecond) {   //метод умножения
         this.counter++;
         if (this.calculator1 != null){
             return calculator1.multiply(multiplierFirst, multiplierSecond);
@@ -44,7 +44,7 @@ public class CalculatorWithCounter {
         }
     }
 
-    double subtraction(double minusFirst,double minusSecond) {  //метод вычитания
+    public double subtraction(double minusFirst,double minusSecond) {  //метод вычитания
         this.counter++;
         if (this.calculator1 != null){
             return calculator1.subtraction(minusFirst, minusSecond);
@@ -55,7 +55,7 @@ public class CalculatorWithCounter {
         }
     }
 
-    double addition(double addFirst,double addSecond) { // метод сложения
+    public double addition(double addFirst,double addSecond) { // метод сложения
         this.counter++;
         if (this.calculator1 != null){
             return calculator1.addition(addFirst, addSecond);
@@ -66,7 +66,7 @@ public class CalculatorWithCounter {
         }
     }
 
-    double exponentiation(double number, int rate) { // метод степени
+    public double exponentiation(double number, int rate) { // метод степени
         this.counter++;
         if (this.calculator1 != null){
             return calculator1.exponentiation(number, rate);
@@ -77,7 +77,7 @@ public class CalculatorWithCounter {
         }
     }
 
-    double modulation(double number) { // метод модуля
+    public double modulation(double number) { // метод модуля
         this.counter++;
         if (this.calculator1 != null){
             return calculator1.modulation(number);
@@ -88,7 +88,7 @@ public class CalculatorWithCounter {
         }
     }
 
-    double rootOFnumber(double number, int rate) {   // метод корня
+    public double rootOFnumber(double number, int rate) {   // метод корня
         this.counter++;
         if (this.calculator1 != null){
             return calculator1.rootOFnumber(number, rate);
