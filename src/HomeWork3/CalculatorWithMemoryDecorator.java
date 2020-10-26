@@ -1,50 +1,71 @@
 package HomeWork3;
 
-public class CalculatorWithMemoryDecorator implements ICalculator{
+public class CalculatorWithMemoryDecorator extends CalculatorDecorator{
 
-    private ICalculator constINconst;
-    private ICalculator rightHere;
+    private double saveNumber;
+    private double lastNumberChanged;
 
     CalculatorWithMemoryDecorator(ICalculator data){
-        constINconst = data;
+        super(data);
     }
 
-    public ICalculator getCalculator(){
-        return constINconst;
+    public double getSaveNumber() {
+        double cash = this.saveNumber;
+        this.saveNumber = 0.0;
+        return cash;
+    }
+
+    public double saveLastNumber(){
+        this.saveNumber = this.lastNumberChanged;
+        return this.saveNumber;
     }
 
     @Override
     public double division(double dividend, double divider) {
-        return constINconst.division(dividend, divider);
+        double result = super.division(dividend, divider);
+        lastNumberChanged = result;
+        return result;
     }
 
     @Override
     public double multiply(double multiplierFirst, double multiplierSecond) {
-        return constINconst.multiply(multiplierFirst, multiplierSecond);
+        double result = super.multiply(multiplierFirst, multiplierSecond);
+        lastNumberChanged = result;
+        return result;
     }
 
     @Override
     public double subtraction(double minusFirst, double minusSecond) {
-        return constINconst.subtraction(minusFirst, minusSecond);
+        double result = super.subtraction(minusFirst, minusSecond);
+        lastNumberChanged = result;
+        return result;
     }
 
     @Override
     public double addition(double addFirst, double addSecond) {
-        return constINconst.addition(addFirst, addSecond);
+        double result = super.addition(addFirst, addSecond);
+        lastNumberChanged = result;
+        return result;
     }
 
     @Override
     public double exponentiation(double number, int rate) {
-        return constINconst.exponentiation(number, rate);
+        double result = super.exponentiation(number, rate);
+        lastNumberChanged = result;
+        return result;
     }
 
     @Override
     public double modulation(double number) {
-        return constINconst.modulation(number);
+        double result = super.modulation(number);
+        lastNumberChanged = result;
+        return result;
     }
 
     @Override
     public double rootOFnumber(double number, int rate) {
-        return constINconst.rootOFnumber(number, rate);
+        double result = super.rootOFnumber(number, rate);
+        lastNumberChanged = result;
+        return result;
     }
 }

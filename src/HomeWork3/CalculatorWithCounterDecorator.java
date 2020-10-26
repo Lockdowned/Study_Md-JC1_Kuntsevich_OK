@@ -1,50 +1,56 @@
 package HomeWork3;
 
-public class CalculatorWithCounterDecorator implements ICalculator{
+public class CalculatorWithCounterDecorator extends CalculatorDecorator{
 
-    private ICalculator constINconst;
-    private ICalculator rightHere;
+    private long counter;
 
     CalculatorWithCounterDecorator(ICalculator data){
-        constINconst = data;
+        super(data);
     }
 
-    public ICalculator getCalculator(){
-        return constINconst;
+    public long getCounter() {
+        return this.counter;
     }
 
     @Override
     public double division(double dividend, double divider) {
-        return constINconst.division(dividend, divider);
+        counter++;
+        return super.division(dividend, divider);
     }
 
     @Override
     public double multiply(double multiplierFirst, double multiplierSecond) {
-        return constINconst.multiply(multiplierFirst, multiplierSecond);
+        counter++;
+        return super.multiply(multiplierFirst, multiplierSecond);
     }
 
     @Override
     public double subtraction(double minusFirst, double minusSecond) {
-        return constINconst.subtraction(minusFirst, minusSecond);
+        counter++;
+        return super.subtraction(minusFirst, minusSecond);
     }
 
     @Override
     public double addition(double addFirst, double addSecond) {
-        return constINconst.addition(addFirst, addSecond);
+        counter++;
+        return super.addition(addFirst, addSecond);
     }
 
     @Override
     public double exponentiation(double number, int rate) {
-        return constINconst.exponentiation(number, rate);
+        counter++;
+        return super.exponentiation(number, rate);
     }
 
     @Override
     public double modulation(double number) {
-        return constINconst.modulation(number);
+        counter++;
+        return super.modulation(number);
     }
 
     @Override
     public double rootOFnumber(double number, int rate) {
-        return constINconst.rootOFnumber(number, rate);
+        counter++;
+        return super.rootOFnumber(number, rate);
     }
 }
