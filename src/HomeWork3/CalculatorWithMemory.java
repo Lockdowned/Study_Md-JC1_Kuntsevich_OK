@@ -1,7 +1,7 @@
 package HomeWork3;
 
 public class CalculatorWithMemory{
-    private ICalculator calculator;
+    private final ICalculator calculator;
     private double lastNumberChanged;
     private double saveNumber;
 
