@@ -1,7 +1,7 @@
 package HomeWork5;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 public interface ISearchEngine {
     /**
@@ -9,5 +9,5 @@ public interface ISearchEngine {
      * @param word this is the word that we find
      * @return the number of times a word occurs in the text
      */
-    long search (String text, String word) throws IOException;
+    long search (String text, String word) throws IOException, URISyntaxException;
 }

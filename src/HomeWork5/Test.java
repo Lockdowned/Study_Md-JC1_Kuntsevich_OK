@@ -4,6 +4,7 @@ package HomeWork5;
  */
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class Test {
     public static void main(String[] args){
@@ -13,10 +14,10 @@ public class Test {
             System.out.println("и(как союз) - " + test.search("Война и мир_книга.txt", "и") + " раз.");
             System.out.println("мир - " + test.search("Война и мир_книга.txt", "мир") + " раз.");
 
+        }catch (NullPointerException e){
+        System.out.println("Файл не найден");
 
-
-            System.out.println(test.search("Война и мир_книга.txt", "и"));
-        }catch (IOException e){
+        }catch (IOException | URISyntaxException e){
             e.printStackTrace();
         }
 

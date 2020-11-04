@@ -1,16 +1,19 @@
 package HomeWork5;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
 import java.util.*;
 
 
 public class Finder {
     public static void main(String[] args) {
         try {
-            FileReader war = new FileReader("Война и мир_книга.txt");
+            URL res = Finder.class.getClassLoader().getResource("Война и мир_книга.txt");
+            File file = Paths.get(res.toURI()).toFile();
+            String absolutePath = file.getAbsolutePath();
+            FileReader war = new FileReader(absolutePath);
             BufferedReader buff = new BufferedReader(war);
 
 
@@ -81,9 +84,10 @@ public class Finder {
 
 
 
-        }catch (FileNotFoundException e){
+        }catch (NullPointerException e){
             System.out.println("Файл не найден");
-        } catch (IOException e) {
+
+        }catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
     }
