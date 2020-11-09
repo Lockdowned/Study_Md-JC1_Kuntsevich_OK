@@ -7,7 +7,7 @@ public class Arrays2_1 {
         Scanner consol = new Scanner(System.in);
         System.out.print("Размер массива : ");
         int size = consol.nextInt();
-        int arr[] = new int[size];
+        int[] arr = new int[size];
         System.out.print("\nВводим элементы массива :");
         for (int i = 0; i < arr.length ; i++) { //этот блок можно написать foreach
             arr[i] = consol.nextInt();
