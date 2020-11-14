@@ -12,7 +12,7 @@ public class DataContainer<T>{
     private T[] data;
     private T[] dataCopy;
 
-    
+
     public int add(T item){
         if (item == null) return - 1;
         int count = 0;
