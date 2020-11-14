@@ -3,7 +3,7 @@ package HomeWork4;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class DataContainer<T> {
+public class DataContainer<T>{
 
     DataContainer(T[] data){
        this.data = data;
@@ -12,7 +12,7 @@ public class DataContainer<T> {
     private T[] data;
     private T[] dataCopy;
 
-
+    
     public int add(T item){
         if (item == null) return - 1;
         int count = 0;
@@ -31,7 +31,6 @@ public class DataContainer<T> {
         data[count] = item;
         return count;
     }
-
 
     public T get(int index){
         if (index >=0 && index < data.length){
@@ -67,9 +66,36 @@ public class DataContainer<T> {
         return false;
     }
 
-//    public void sort(Comparator<? super T>comparator){
-//        Sort.cocktailSort(data, comparator);
-//    }
+public void sort(Comparator<T> comparator) {
+    if (comparator != null & data.length > 1) {
+        boolean completedSort = false;
+        int left, right;
+        T cash;
+        left = 0;
+        right = data.length - 1;
+        while (!completedSort){
+            completedSort = true;
+            for (int i = left; i < right ; i++) {
+                if (comparator.compare(data[i], data[i + 1]) > 0) {
+                    completedSort = false;
+                    cash = data[i];
+                    data[i] = data[i + 1];
+                    data[i + 1] = cash;
+                }
+            }
+            right--;
+            for (int i = right; i > left; i--) {
+                if (comparator.compare(data[i], data[i - 1]) < 0) {
+                    completedSort = false;
+                    cash = data[i];
+                    data[i] = data[i - 1];
+                    data[i - 1] = cash;
+                }
+            }
+            left++;
+        }
+    }
+}
 
     @Override
     public String toString() {
@@ -87,15 +113,32 @@ public class DataContainer<T> {
                 b.append(data[i]);
             }
             if (i == iMax){
-                String a = String.valueOf(b);
-                int comma = a.lastIndexOf(',');
-                b.delete(comma, comma + 2);
                 return b.append(']').toString();
             }
-
-            if (data[i] != null){
-                b.append(", ");
+            for (int j = i; j < iMax; j++) {
+                if (data[j + 1] != null) {
+                    b.append(", ");
+                    i = j;
+                    break;
+                }
             }
         }
     }
+//    /*
+//    С вебинара(осознать) и написать реализацию сортировки
+//     */
+//
+//    public static <T extends Comparable<T>> void sort(DataContainer<T> container) {
+//        if (container.data[0].compareTo(container.data[1]) > 0) {
+//
+//        }
+//
+//
+//    }
+//
+//    public static <T> void sort(DataContainer<T> container, Comparator<T> comparator) {
+//        if (comparator.compare(container.data[0], container.data[1]) > 0) {
+//
+//        }
+//    }
 }

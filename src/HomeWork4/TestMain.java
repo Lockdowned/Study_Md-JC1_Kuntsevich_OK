@@ -52,19 +52,9 @@ public class TestMain {
         System.out.println("delete item 3: " + ok7.delete(c));
         System.out.println(Arrays.toString(ok7.getItems()));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        DataContainer<Integer> ok8 = new DataContainer<>(new Integer[]{1, 2, 4, 777, 6});
+        System.out.println("\nstart Arr : " + Arrays.toString(ok8.getItems()));
+        ok8.sort(new DataComparator<>());
+        System.out.println("Test no Static Sort : " + Arrays.toString(ok8.getItems()));
     }
 }
