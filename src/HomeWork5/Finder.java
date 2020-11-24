@@ -31,23 +31,11 @@ public class Finder {
                 }
             }
 
-            String[] uniqueWords = new String[unique.size()];
-            String[] allWords = new String[all.size()];
-            int i = 0;
-
-            for (String a:unique) {
-                uniqueWords[i++] = a;
-            }
-            i = 0;
-            for (String a:all) {
-                allWords[i++] = a;
-            }
-
             Map<String, Integer> sortedMap = new HashMap<>();
             int count = 0;
             int maxCount = 0;
-            for (String a:uniqueWords) {
-                for (String b:allWords) {
+            for (String a:unique) {
+                for (String b:all) {
                     if (a.equals(b)){
                         count++;
                     }
@@ -62,6 +50,7 @@ public class Finder {
             }
 
             Set<Map.Entry<String, Integer>> entryMap = sortedMap.entrySet();
+            count = 0;
 
             System.out.println("Top 10 repeat words: ");
             for (int j = maxCount; j >= 0; j--) {
@@ -82,14 +71,10 @@ public class Finder {
                 }
             }
 
-
-
-        }catch (NullPointerException e){
+        }catch (URISyntaxException | FileNotFoundException e) {
             System.out.println("Файл не найден");
-
-        }catch (IOException | URISyntaxException e) {
+        }catch (IOException e){
             e.printStackTrace();
         }
     }
-
 }

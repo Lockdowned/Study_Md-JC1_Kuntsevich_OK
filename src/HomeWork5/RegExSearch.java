@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class EasySearch implements ISearchEngine{
+public class RegExSearch implements ISearchEngine {
     @Override
     public long search(String text, String word) throws IOException, URISyntaxException {
         /*
@@ -17,30 +19,20 @@ public class EasySearch implements ISearchEngine{
         URL res = getClass().getClassLoader().getResource(text);
         File file = Paths.get(res.toURI()).toFile();
         String absolutePath = file.getAbsolutePath();
-
-
         FileReader war = new FileReader(absolutePath);
         BufferedReader buff = new BufferedReader(war);
-        VerificationCounter check = new VerificationCounter();
-        String line;
-        int resetCount;
+
         int counter = 0;
-        int plusCounter = 0;
+        String line;
+
         word = word.toUpperCase();
+        Pattern pattern = Pattern.compile("\\b" + word + "\\b");
         while ((line = buff.readLine()) != null){
             line = line.toUpperCase();
-            resetCount = -1;
-            do {if (resetCount == -1){
-                resetCount = line.indexOf(word);
-            }else {
-                resetCount = line.indexOf(word, resetCount + word.length());
+            Matcher matcher = pattern.matcher(line);
+            while (matcher.find()) {
+                counter++;
             }
-            if (check.independentWord(line, word, resetCount)){
-               plusCounter++;
-            }
-            }while (resetCount != -1);
-            counter += plusCounter;
-            plusCounter = 0;
         }
         return counter;
     }
