@@ -2,9 +2,11 @@ package HomeWork5;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.sql.Time;
 
 public class Test {
     public static void main(String[] args){
+        long startTime = System.currentTimeMillis();
         String nameTxt = "Война и мир_книга.txt";
         String word1 = "война";
         String word2 = "и";
@@ -30,5 +32,6 @@ public class Test {
             e.printStackTrace();
         }
 
+        System.out.println("Время выполнения: " + (System.currentTimeMillis() - startTime));
     }
 }

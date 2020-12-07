@@ -1,4 +1,4 @@
-package HomeWork5;
+package HomeWork6;
 
 import java.io.*;
 import java.net.URISyntaxException;
