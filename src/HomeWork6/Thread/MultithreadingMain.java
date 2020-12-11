@@ -230,7 +230,7 @@ public class MultithreadingMain {
         }
 
 
-        /*
+        /**
         Вопрос: Как понимаю так берет text4 изза того что они в "Future Queue"
          */
 //        LambdaTrick lambdaTrick = new LambdaTrick();
